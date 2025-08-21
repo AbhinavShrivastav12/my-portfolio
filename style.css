@@ -21,7 +21,14 @@
         width: 30px !important;
         height: 30px !important;
         border-radius: 5px !important;
-        object-fit: cover !important; /* keeps proportions */
+        object-fit: cover !important;
+        /* keeps proportions */
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        margin: 5%;
     }
 }
 
@@ -145,8 +152,7 @@ body.dark-mode a:hover {
     color: #ffd600;
 }
 
+
 body.dark-mode .icon {
     stroke: #fff;
 }
-
-
