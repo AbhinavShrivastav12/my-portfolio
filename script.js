@@ -27,5 +27,5 @@ themeToggle.addEventListener("click", () => {
     localStorage.setItem("darkMode", darkMode);
 });
 function goHome() {
-    window.location.href="my-portfolio.html"
+    window.location.href="index.html"
 }
