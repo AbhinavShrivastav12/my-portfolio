@@ -41,6 +41,16 @@ body {
     padding: 10px 10px 0 10px;
 }
 
+/*Data flicker*/
+body[data-loading] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+/* show pages after js is loaded */
+body[data-loading = "loaded"] {
+    opacity: 1;
+} 
+
 nav {
     background-color: aliceblue;
     border-radius: 10px;
@@ -159,27 +169,110 @@ body.dark-mode .icon {
 }
 
 section {
-  padding: 60px 20px ;
-  min-height: 100vh;
-  margin: 10px;
+    padding: 60px 20px;
+    min-height: 100vh;
+    margin: 10px;
 }
 
 #home {
-  background: #e6f2ff;
-  border-radius: 10px;
+    background: #e6f2ff;
+    border-radius: 10px;
 }
 
 #about {
-  background: #fff5e6;
-  border-radius: 10px;
+    background: #fff5e6;
+    border-radius: 10px;
 }
 
 #projects {
-  background: #e6ffe6;
-  border-radius: 10px;
+    background: #e6ffe6;
+    border-radius: 10px;
 }
 
 #contact {
-  background: #ffe6e6;
-  border-radius: 10px;
+    background: #ffe6e6;
+    border-radius: 10px;
+}
+/* Footer Base */
+footer {
+    background-color: #f0f0f0;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Flex Layout */
+.footer_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* About Section */
+.footer_about h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.footer_about p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+
+/* Links */
+.footer_links p {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.footer_links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_links ul li {
+    margin-bottom: 6px;
+}
+
+.footer_links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer_links a:hover {
+    color: #007BFF;
+}
+
+/* Socials */
+.footer_socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer_socials a svg {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s;
+}
+
+.footer_socials a:hover svg {
+    transform: scale(1.2);
+}
+
+/* Footer Line */
+.footer_line {
+    border: none;
+    border-top: 1px solid #999;
+    margin: 20px 0;
+}
+
+/* Copyright */
+.footer_copy {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
 }
