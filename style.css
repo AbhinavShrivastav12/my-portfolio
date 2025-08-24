@@ -38,7 +38,7 @@ body {
     background-color: aqua;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s;
-    padding: 10px 10px 0 10px;
+    border-radius: 10px;
 }
 
 /*Data flicker*/
@@ -53,20 +53,21 @@ body[data-loading = "loaded"] {
 
 nav {
     background-color: aliceblue;
-    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 0;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
     transition: background-color 0.3s;
-    box-shadow: 0 8px 15px #00000033;
 }
 
 .logo {
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 2px;
+    padding-left: 20px;
 }
 
 .center ul {
@@ -86,7 +87,7 @@ nav {
 a {
     position: relative;
     text-decoration: none;
-    color: #333;
+    color: #5b6370;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -125,7 +126,7 @@ a:hover::after {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 6px;
+    padding-right: 20px;
     border-radius: 50%;
     transition: background 0.3s;
 }
@@ -147,12 +148,12 @@ a:hover::after {
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #1f1f21;
+    background-color: #1a1b26;
     color: #fff;
 }
 
 body.dark-mode nav {
-    background-color: #2c2c2f;
+    background-color: #838892;
 }
 
 body.dark-mode a {
@@ -168,6 +169,10 @@ body.dark-mode .icon {
     stroke: #fff;
 }
 
+p,h1,h2,h3,h4,h5,h6 {
+    margin:0;
+}
+
 section {
     padding: 60px 20px;
     min-height: 100vh;
@@ -180,22 +185,21 @@ section {
 }
 
 #about {
-    background: #fff5e6;
+    background: #f9fafb;
     border-radius: 10px;
 }
 
 #projects {
-    background: #e6ffe6;
+    background: #ffffff;
     border-radius: 10px;
 }
 
 #contact {
-    background: #ffe6e6;
-    border-radius: 10px;
+    background: #fafafa;
 }
 /* Footer Base */
 footer {
-    background-color: #f0f0f0;
+    background-color: #f3f4f6;
     padding: 30px 20px;
     font-family: Arial, sans-serif;
 }
@@ -275,4 +279,45 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #666;
+}
+/* contact main */
+.contact_main{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.contact_icons {
+  width: 30px;
+  height: 30px;
+  background: #eceff3;
+  border-radius: 12px;
+  display: flex;               /* use flexbox to center SVG */
+  align-items: center;         /* vertical centering */
+  justify-content: center;     /* horizontal centering */
+}
+.contact_icons_svg {
+  width: 16px;                 /* size the SVG smaller than container */
+  height: 16px;
+}
+
+.contact_forms {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.contact_me{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 10px;
+}
+.contact_details {
+    display: flex;           /* horizontal layout */
+    flex-direction: column;     /* vertical alignment */
+}
+.follow_me{
+    padding-top: 20px;
 }
