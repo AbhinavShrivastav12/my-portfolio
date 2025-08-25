@@ -82,4 +82,3 @@ fetch(getPath("../config.json")) // adjust path relative to your page
     }
   })
   .catch(err => console.error("Error loading config.json:", err));
-
