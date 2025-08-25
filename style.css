@@ -30,12 +30,38 @@
         justify-content: center;
         margin: 5%;
     }
+
+    .contact_forms{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .form-data{
+        margin-top:30px !important;
+    }
+    .footer_about h1 {
+    font-size: 16px !important;
+}
+
+.footer_about p {
+    font-size: 10px !important;
+}
+.footer_links p {
+    font-size: 16px !important;
+}
+.footer_socials a svg {
+    width: 18px !important;
+    height: 18px !important;
+    transition: transform 0.3s;
+}
+.footer_links ul li {
+  font-size: 10px !important;
+}
 }
 
 /* Reset & Base */
 body {
     margin: 0;
-    background-color: aqua;
+    background-color: #fff;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 10px;
@@ -126,13 +152,14 @@ a:hover::after {
     background: none;
     border: none;
     cursor: pointer;
-    padding-right: 20px;
-    border-radius: 50%;
+    padding-right: 5px;
+    margin-left: 10px;
+    border-radius: 40px;
     transition: background 0.3s;
 }
 
 #themeToggle:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: #0000001a;
 }
 
 .icon {
@@ -176,7 +203,7 @@ p,h1,h2,h3,h4,h5,h6 {
 section {
     padding: 60px 20px;
     min-height: 100vh;
-    margin: 10px;
+    margin: 0
 }
 
 #home {
@@ -194,14 +221,48 @@ section {
     border-radius: 10px;
 }
 
-#contact {
-    background: #fafafa;
-}
 /* Footer Base */
 footer {
-    background-color: #f3f4f6;
     padding: 30px 20px;
     font-family: Arial, sans-serif;
+    background: #f3f4f6;
+}
+/* Dark Mode Footer */
+body.dark-mode footer {
+  background-color: #1a1b26 !important;
+  color: #f3f4f6;
+}
+
+
+/* Text sections */
+footer.dark-mode .footer_about h1,
+footer.dark-mode .footer_about p,
+footer.dark-mode .footer_links p,
+footer.dark-mode .footer_copy {
+  color: #f1f5f9;
+}
+
+/* Links */
+footer.dark-mode .footer_links a {
+  color: #cbd5e1; /* muted gray */
+}
+
+footer.dark-mode .footer_links a:hover {
+  color: #60a5fa; /* blue hover */
+}
+
+/* Social Icons – now inherit color */
+footer.dark-mode .footer_socials a {
+  color: #f1f5f9;
+}
+
+footer.dark-mode .footer_socials a:hover {
+  color: #60a5fa;
+}
+
+/* Divider line */
+footer.dark-mode .footer_line {
+  border-top: 1px solid #334155;
 }
 
 /* Flex Layout */
@@ -304,10 +365,11 @@ footer {
 .contact_forms {
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10%;
     padding-top: 20px;
 }
+
 .contact_me{
     display: flex;
     flex-direction: row;
@@ -321,3 +383,82 @@ footer {
 .follow_me{
     padding-top: 20px;
 }
+.input_type{
+    border-radius: 10px;
+    border: #d5d9de 1px solid;
+    padding: 8px  8px ;
+    margin-bottom: 10px;
+    width: 250px;
+}
+textarea{
+    resize: vertical;
+    min-height: 80px;
+    max-height: 300px;
+}
+.button_class{
+    display: flex;
+    flex-direction: column;
+    background-color: #6b8cae;
+    border: none;
+    text-align: center;
+    color: #eceff3;
+    padding: 10px;
+    width: 270px;
+    border-radius: 7px;
+}
+.label_text {
+  color: #374151;
+  font-size: small;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_title {
+  color: #111827;
+}
+
+/*For contact darkmode*/
+/* Contact Section Dark Mode */
+body.dark-mode #contact {
+  background-color: #1e1e2f;
+}
+
+body.dark-mode .main-body h1,
+body.dark-mode .main-body p,
+body.dark-mode .main-body h5,
+body.dark-mode .main-body p,
+body.dark-mode .main-body a,
+body.dark-mode label,
+body.dark-mode ::placeholder
+{
+  color: #e5e7eb !important; /* light gray */
+}
+
+body.dark-mode .contact_icons {
+  background: #2a2b3d; /* darker bg for icons */
+}
+
+body.dark-mode .contact_icons_svg {
+  stroke: #e5e7eb; /* light gray stroke */
+  fill: #e5e7eb;
+}
+
+body.dark-mode .input_type,
+body.dark-mode textarea {
+  background-color: #2a2b3d;
+  color: #f9fafb;
+  border: 1px solid #444;
+}
+
+body.dark-mode .input_type::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #9ca3af; /* muted placeholder */
+}
+
+body.dark-mode .button_class {
+  background-color: #3b82f6; /* blue button */
+  color: #fff;
+}
+
+
