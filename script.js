@@ -79,4 +79,30 @@ fetch("../config.json")
     document.getElementById("phone_url").href = data.phone;
   })
   .catch(error => console.error("Error loading config.json:", error));
+const form = document.getElementById("contactForm");
 
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value
+  };
+
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  });
+
+  const result = await response.json();
+
+  if (result.success) {
+    alert("Message sent successfully!");
+    form.reset();
+  } else {
+    alert("Error sending message: " + result.error);
+  }
+});
