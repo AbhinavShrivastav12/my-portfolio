@@ -68,18 +68,15 @@ Promise.all([
 })
 .catch(err => console.error("Error loading components:", err));
 //for config.json file
-fetch(getPath("../config.json")) // adjust path relative to your page
-  .then(res => res.json())
-  .then(config => {
-    const linkedinLink = document.getElementById("linkedin_url");
-    if (linkedinLink && config.linkedin) {
-      linkedinLink.href = config.linkedin; // set the real URL
-    }
-
-    const githubLink = document.getElementById("github_url");
-    if (githubLink && config.github) {
-      githubLink.href = config.github;
-    }
+// Fetch config.json and apply links dynamically
+fetch("../config.json")
+  .then(response => response.json())
+  .then(data => {
+    // Update social links
+    document.getElementById("github_url").href = data.github;
+    document.getElementById("linkedin_url").href = data.linkedin;
+    document.getElementById("email_url").href = data.email;
+    document.getElementById("phone_url").href = data.phone;
   })
-  .catch(err => console.error("Error loading config.json:", err));
+  .catch(error => console.error("Error loading config.json:", error));
 

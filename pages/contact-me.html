@@ -108,21 +108,25 @@
                     <h4>Follow Me</h4>
                     <div style="display: flex; flex-direction: row; gap: 10px; margin-top: 5px;">
                         <div class="contact_icons">
-                            <svg class="contact_icons_svg" viewBox="0 0 512 512" fill="none"
+                            <a href="#" id="linkedin_url" target="_blank" aria-label="LinkedIn">
+                                <svg class="contact_icons_svg" viewBox="0 0 512 512" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M84 136C112.719 136 136 112.719 136 84C136 55.2812 112.719 32 84 32C55.2812 32 32 55.2812 32 84C32 112.719 55.2812 136 84 136ZM416 179.991C470.399 202.392 480 248 480 311.994V479.994H392V311.994C392 223.998 280 231.996 280 327.994V480H192V184H280V216.641C310.582 178.201 372.134 161.927 416 179.991ZM40 184H128V480H40V184Z"
                                     fill="currentColor"></path>
                             </svg>
+                            </a>
                         </div>
                         <div class="contact_icons">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                          <a href="#" id="github_url" target="_blank" aria-label="GitHub">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 class="contact_icons_svg">
                                 <path
                                     d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" fill="currentColor">
                                 </path>
                             </svg>
+                          </a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +147,7 @@
                          class="label_text">Message</label>
                     <textarea id="idea" type="text" class="input_type" placeholder="Tell me about your project"
                         autocomplete="off"></textarea>
-                    <button class="button_class">Send Message</button>
+                    <button type="submit" class="button_class" onclick="">Send Message</button>
                 </form>
             </div>
         </div>
