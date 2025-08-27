@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* Responsive: from 320px up to 500px */
 @media (min-width: 300px) and (max-width: 500px) {
     .center ul {
@@ -18,8 +23,8 @@
     }
 
     .logo {
-        width: 30px !important;
-        height: 30px !important;
+        width: 50px !important;
+        height: 50px !important;
         border-radius: 5px !important;
         object-fit: cover !important;
         /* keeps proportions */
@@ -35,6 +40,10 @@
         display: flex !important;
         flex-direction: column !important;
     }
+   .contact_forms{
+    padding-left: 20px;
+   }
+
     .form-data{
         margin-top:30px !important;
     }
@@ -43,11 +52,15 @@
         flex-direction: column !important;
          gap: 20px;
           padding-top: 5%;
-
     }
+
 
     .footer_about h1 {
     font-size: 16px !important;
+}
+.footer_item {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer_about p {
@@ -68,11 +81,8 @@
 
 /* Reset & Base */
 body {
-    margin: 0;
     background-color: #fff;
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 10px;
 }
 
 /*Data flicker*/
@@ -91,17 +101,14 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
-    border-top-right-radius: 2%;
-    border-top-left-radius: 2%;
-    transition: background-color 0.3s;
 }
 
 .logo {
-    height: 40px;
-    width: 40px;
+    height: 6%;
+    width:6%;
     border-radius: 2px;
-    padding-left: 20px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .center ul {
@@ -207,23 +214,9 @@ body.dark-mode .icon {
 p,h1,h2,h3,h4,h5,h6 {
     margin:0;
 }
-
-section {
-    padding: 60px 20px;
-    min-height: 100vh;
-    margin: 0
+main {
+  flex: 1; /* pushes footer down */
 }
-
-#home {
-    background: #e6f2ff;
-    border-radius: 10px;
-}
-
-#projects {
-    background: #ffffff;
-    border-radius: 10px;
-}
-
 /* Footer Base */
 footer {
     padding: 30px 20px;
@@ -267,15 +260,17 @@ footer.dark-mode .footer_socials a:hover {
 footer.dark-mode .footer_line {
   border-top: 1px solid #334155;
 }
-
+section{
+    padding-bottom: 10%;
+}
 /* Flex Layout */
 .footer_item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 10px;
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
     align-items: flex-start;
 }
 
@@ -350,6 +345,7 @@ footer.dark-mode .footer_line {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    padding-top: 10vh;
 }
 .contact_icons {
   width: 30px;
@@ -422,7 +418,11 @@ textarea{
 }
 
 /*About me page*/
+
 .about_main{
+    padding-top: 10vh;
+    padding-left: 5px;
+    padding-right: 5px;
     display: flex; 
     flex-direction: column;
     justify-content: center;
