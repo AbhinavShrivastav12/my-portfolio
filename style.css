@@ -38,6 +38,14 @@
     .form-data{
         margin-top:30px !important;
     }
+    
+    .picture_about{
+        flex-direction: column !important;
+         gap: 20px;
+          padding-top: 5%;
+
+    }
+
     .footer_about h1 {
     font-size: 16px !important;
 }
@@ -208,11 +216,6 @@ section {
 
 #home {
     background: #e6f2ff;
-    border-radius: 10px;
-}
-
-#about {
-    background: #f9fafb;
     border-radius: 10px;
 }
 
@@ -418,6 +421,45 @@ textarea{
   color: #111827;
 }
 
+/*About me page*/
+.about_main{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+ .picture_about{
+        display: flex;
+        flex-direction: row;
+         gap: 20px;
+          padding-top: 5%;
+
+    }
+ ul.circle-bullets {
+    list-style: none; /* remove default bullets */
+    padding-left: 30px; /* space for bullets */
+  }
+
+  ul.circle-bullets li {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 16px; /* adjust as needed */
+  }
+
+  ul.circle-bullets li::before {
+    content: "";
+    top: 2px;
+    position: absolute;
+    left: -30px;       /* space from text */
+    width: 12px;       /* bullet size */
+    height: 12px;
+    border-radius: 50%; /* make circle */
+    background-color: #6b8cae; /* your color */
+  }
+
+body.dark-mode #about {
+  background-color: #1e1e2f;
+}
 /*For contact darkmode*/
 /* Contact Section Dark Mode */
 body.dark-mode #contact {
@@ -425,8 +467,11 @@ body.dark-mode #contact {
 }
 
 body.dark-mode .main-body h1,
-body.dark-mode .main-body p,
+body.dark-mode .main-body h2,
+body.dark-mode .main-body h3,
+body.dark-mode .main-body h4,
 body.dark-mode .main-body h5,
+body.dark-mode .main-body h6,
 body.dark-mode .main-body p,
 body.dark-mode .main-body a,
 body.dark-mode label,
