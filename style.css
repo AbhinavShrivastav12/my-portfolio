@@ -53,8 +53,6 @@
          gap: 20px;
           padding-top: 5%;
     }
-
-
     .footer_about h1 {
     font-size: 16px !important;
 }
@@ -77,8 +75,15 @@
 .footer_links ul li {
   font-size: 10px !important;
 }
-}
+  .circle-bullets li h4 {
+    margin-bottom: 8px; /* space between h4 and first <p> */
+  }
 
+  .circle-bullets li p {
+    margin-top: 6px;  /* extra space if needed */
+  }
+
+}
 /* Reset & Base */
 body {
     background-color: #fff;
@@ -428,6 +433,17 @@ textarea{
     justify-content: center;
     align-items: center; 
 }
+.about_journey{
+    padding: 5%;
+    
+}
+  .circle-bullets li h4 {
+    margin-bottom: 8px; /* space between h4 and first <p> */
+  }
+
+  .circle-bullets li p {
+    margin-top: 6px;  /* extra space if needed */
+  }
  .picture_about{
         display: flex;
         flex-direction: row;
@@ -435,9 +451,11 @@ textarea{
           padding-top: 5%;
 
     }
+
  ul.circle-bullets {
     list-style: none; /* remove default bullets */
     padding-left: 30px; /* space for bullets */
+    margin: 20px;
   }
 
   ul.circle-bullets li {
