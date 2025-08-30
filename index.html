@@ -10,33 +10,27 @@
 
 <body>
   <div id="navbar"></div>
+
   <main>
-    <section id="home">
-      <div class="main-body">
-        <div style="position: relative; display: inline-block; width: 100%;">
-          <picture>
-            <img src="assets/dashboard.jpg" alt="Dashboard" style="width: 100%; height: fit-content; color:#e6f3fd;">
-          </picture>
-          <h1 class="overlap_text" style="color: #111827;">Frontend Developer & UI Designer</h1>
-          <p class="overlap_text" style="font-size: medium; padding-top: 14%; color: #3c424b;">I create beautiful,
-            responsive web applications with modern technologies. Passionate about clean code, user experience, and
-            bringing creative ideas to life through interactive interfaces.</p>
-          <div style="display: flex; flex-direction: row;">
-            <a href="./pages/projects.html" class="overlap_text" style="padding-top: 20%; padding-right: 41%;"><button
-                style="padding: 10px; background: #6b8cae;color: white; border: none; border-radius: 5px;"
-                onmouseover="this.style.background=' #80a7ce'" onmouseout="this.style.background='#6b8cae'">View My
-                Work</button></a>
-            <a href="./pages/contact-me.html" class="overlap_text" style="padding-top: 20%; padding-right: 25%;"><button
-                style="padding: 10px;color: #374151; border-radius: 5px; border: 1px solid #d2d6dd; background: transparent; "
-                onmouseover="this.style.background='white'" onmouseout="this.style.background='transparent'">Get In
-                Touch</button></a>
-          </div>
-        </div>
+   <section id="home">
+  <div class="hero">
+    <img src="assets/dashboard.jpg" alt="Dashboard">
+    <div class="hero-overlay">
+      <h1>Frontend Developer & UI Designer</h1>
+      <p>I create beautiful, responsive web applications with modern technologies. Passionate about clean code, user experience, and bringing creative ideas to life through interactive interfaces.</p>
+      <div class="hero-buttons">
+        <a href="./pages/projects.html" class="btn-primary">View My Work</a>
+        <a href="./pages/contact-me.html" class="btn-secondary">Get In Touch</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   </main>
+
   <div id="footer"></div>
+
+  <script src="../script.js" defer></script>
 </body>
-<script src="../script.js" defer></script>
 
 </html>

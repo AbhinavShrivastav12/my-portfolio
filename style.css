@@ -526,14 +526,108 @@ body.dark-mode .button_class {
 }
 
 /*Home page*/
-.overlap_text{
-     position: absolute; 
-      top: 50%; 
-      left: 50%; 
-      transform: translate(-50%, -50%); 
-      color: white; 
-      font-size: 50px; 
-      font-weight: bold; 
-      padding: 10px 20px; 
-      border-radius: 8px
+/* Home Page Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    color: #111827;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+    font-size: 1.1rem;
+    color: #3c424b;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Button hover effects */
+.btn-primary {
+    background: #6b8cae;
+    color: white;
+    border: none;
+    transition: background 0.3s;
+}
+.btn-primary:hover {
+    background: #80a7ce;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #374151;
+    border: 1px solid #d2d6dd;
+    transition: background 0.3s, color 0.3s;
+}
+.btn-secondary:hover {
+    background: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+    .hero-overlay h1 {
+        font-size: 1.8rem;
+    }
+    .hero-overlay p {
+        font-size: 1rem;
+    }
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-overlay h1 {
+        font-size: 1.5rem;
+    }
+    .hero-overlay p {
+        font-size: 0.9rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
