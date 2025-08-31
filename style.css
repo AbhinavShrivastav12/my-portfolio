@@ -57,11 +57,23 @@
     }
 
     .service-card-info {
-        display: flex;
+        display: grid;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 40px;
+    }
+     .service-card-info {
+    grid-template-columns: repeat(2, 1fr); /* exactly 2 per row */
+    gap: 15px;
+  }
+   .tools-card-info {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* exactly 2 columns */
+        gap: 15px !important; /* space between cards */
+        justify-items: center !important; /* center items in each column */
+        margin-top: 5% !important;
     }
 
     .footer_about h1 {
@@ -722,7 +734,6 @@ body.dark-mode .button_class {
     display: flex;
     justify-content: space-evenly;
     margin-top: 5%;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 
 .service_card {
@@ -744,6 +755,11 @@ body.dark-mode .service_card {
 }
 
 /*For technologies*/
+.tools-card-info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
 .tools_card {
     display: grid;
     place-items: center;
