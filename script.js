@@ -12,7 +12,7 @@ Promise.all([
     document.getElementById("navbar").innerHTML = data;
 
     // Home logo redirect
-    window.goHome = () => (window.location.href = "index.html");
+    window.goHome = () => (window.location.href = "../index.html");
 
     // Theme toggle elements
     const themeToggle = document.getElementById("themeToggle");
