@@ -789,33 +789,3 @@ body.dark-mode .tools_card h5 {
     padding-top: 15px;
     color: white;
 }
-/*Popup for send notification*/
-/* Popup styles */
-.popup {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #4caf50; /* green for success */
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  font-size: 14px;
-  z-index: 9999;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-}
-
-.popup.error {
-  background: #f44336; /* red for errors */
-}
-
-.popup.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hidden {
-  display: none;
-}

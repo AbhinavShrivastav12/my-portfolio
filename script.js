@@ -86,33 +86,3 @@ fetch(getPath("../config.json")) // adjust path relative to your page
     }
   })
   .catch((err) => console.error("Error loading config.json:", err));
-//success message for form submittion
-const form = document.getElementById('contactForm');
-const popup = document.getElementById('popup');
-const popupMessage = document.getElementById('popup-message');
-
-function showPopup(message, isError =false) {
-  popupMessage.textContent = message ;
-  popup.classList.remove("hidden", "error", "show");
-  if(isError) popup.classList.add("error");
-  setTimeout(() => popup.classList.add("show"), 50);
-  setTimeout(() => {
-    popup.classList.remove("show");
-    setTimeout(() => popup.classList.add("hidden"),300)
-  },3000)
-}
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const data = new FormData(form);
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers:{'Accept' : 'application/json'}
-  });
-  if(response.ok) {
-    showPopup("Message sent successfully!");
-    form.requestFullscreen();
-  } else {
-    showPopup("Oops! Something went wrong." ,true)
-  }
-})
