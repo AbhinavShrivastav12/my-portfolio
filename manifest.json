@@ -9,12 +9,14 @@
     {
       "src": "assets/image.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "rounded": true
     },
     {
       "src": "assets/image.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "rounded": true
     }
   ]
 }
