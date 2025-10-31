@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | My Portfolio</title>
- <!-- Favicon for desktop -->
-<link rel="icon" type="image/png" href="/assets/image.png">
-
-<!-- iOS / iPhone home screen -->
-<link rel="apple-touch-icon" href="/assets/image.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/image.png">
-
-<!-- Android / Chrome home screen -->
-<link rel="manifest" href="/manifest.json">
-
-<!-- Status bar / theme -->
-<meta name="theme-color" content="#6b8cae">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-
-  <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects</title>
+  
+    <link rel="stylesheet" href="../style.css">
 </head>
-
-<body data-loading>
+<body>
   <div id="navbar"></div>
-  <main>
-    <section id="projects">
-      <h1>My Projects</h1>
-      <p>show case your projects</p>
-    </section>
-  </main>
-  <div id="footer"></div>
+
+  <h1 style="text-align: center; padding-top: 20px;">My Projects</h1>
+  <div class="projects-container">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="../assets/Chat.png.png" alt="chat-app">
+      <div class="project-content">
+        <h3>Hiyu-ChatApp</h3>
+        <p>A real-time chat web app using socket io.</p>
+        <a href="https://hiyu.onrender.com/login" class="demo-link" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="../assets/Portfolio.png" alt="Portfolio">
+      <div class="project-content">
+        <h3>Portfolio Website</h3>
+        <p>A sleek and responsive portfolio site built with HTML, CSS, and JavaScript.</p>
+        <a href="https://my-portfolio-cyan-two-60.vercel.app/" class="demo-link" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="../assets/address.png" alt="Live Address">
+      <div class="project-content">
+        <h3>Live Address Update</h3>
+        <p>A simple live address update using reaxt, express, node and postgresSQL</p>
+        <a href="https://address-five.vercel.app/" class="demo-link" target="_blank">Live Demo</a>
+      </div>
+    </div>
+       <!-- Project 4 -->
+    <div class="project-card">
+      <img src="../assets/Language.png" alt="Live Address">
+      <div class="project-content">
+        <h3>Language Change</h3>
+        <p>A simple language change using reaxt, express, node and postgresSQL</p>
+        <a href="https://my-project-alpha-seven-28.vercel.app/" class="demo-link" target="_blank">Live Demo</a>
+      </div>
+    </div>
+
+  </div>
+<div id="footer"></div>
 </body>
 <script src="../script.js" defer></script>
-
 </html>
