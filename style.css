@@ -727,6 +727,9 @@ body.dark-mode .button_class {
         gap: 10px;
         margin: 10px auto;
     }
+    .projects-container {
+        padding: 15px !important;
+    }
      .project-content h3 {
         font-size: 1.1rem;
       }
