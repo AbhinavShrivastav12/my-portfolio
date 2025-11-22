@@ -201,6 +201,13 @@ a:hover::after {
     transform: translateX(-50%) translateY(0);
 }
 
+/*No tooltip*/
+
+.no-tooltip::after {
+    content: none !important;
+}
+
+
 /* Dark/Light toggle button */
 #themeToggle {
     background: none;
@@ -477,6 +484,11 @@ textarea {
     border-radius: 7px;
 }
 
+a:has(.button_class)::after {
+    content: none !important;
+}
+
+
 .label_text {
     color: #374151;
     font-size: small;
@@ -669,23 +681,30 @@ body.dark-mode .button_class {
     background: #6b8cae;
     color: white;
     border: none;
-    transition: background 0.3s;
 }
 
 .btn-primary:hover {
     background: #80a7ce;
 }
 
+.btn-primary::after {
+    content: none !important;
+}
+
+
 .btn-secondary {
     background: transparent;
     color: #374151;
     border: 1px solid #d2d6dd;
-    transition: background 0.3s, color 0.3s;
 }
 
 .btn-secondary:hover {
     background: white;
 }
+.btn-secondary::after {
+    content: none !important;
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
